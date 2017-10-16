@@ -168,38 +168,38 @@ main {
 }
 
 #parallax-1 {
-    background-image: url("img_parallax1.jpg");
+    background-image: url("images/img_parallax1.jpg");
 }
 #parallax-2 {
-    background-image: url("img_parallax2.jpg");
+    background-image: url("images/img_parallax2.jpg");
     height: 50%;
 }
 #parallax-3 {
-    background-image: url("img_parallax3.jpg");
+    background-image: url("images/img_parallax3.jpg");
     height: 50%;
 }
 
 #parallax-kampfsport-1 {
-    background-image: url("kampfsport1.jpg");
+    background-image: url("images/kampfsport1.jpg");
 }
 #parallax-kampfsport-2 {
-    background-image: url("kampfsport2.jpg");
+    background-image: url("images/kampfsport2.jpg");
     height: 50%;
 }
 
 #parallax-gaming-1 {
-    background-image: url("gaming1.jpg");
+    background-image: url("images/gaming1.jpg");
 }
 #parallax-gaming-2 {
-    background-image: url("gaming2.jpg");
+    background-image: url("images/gaming2.jpg");
     height: 50%;
 }
 
 #parallax-webdesign-1 {
-    background-image: url("webdesign1.jpg");
+    background-image: url("images/webdesign1.jpg");
 }
 #parallax-webdesign-2 {
-    background-image: url("webdesign2.jpg");
+    background-image: url("images/webdesign2.jpg");
     height: 50%;
 }
 
