@@ -74,14 +74,43 @@ nav a {
     background-color: hotpink; 
 }
 
+.theme-black h1 {
+    text-shadow:
+        -0.5px -0.5px 0 black,  
+        0.5px -0.5px 0 black,
+        -0.5px 0.5px 0 black,
+        0.5px 0.5px 0 black;
+}
+.theme-white h1 {
+    text-shadow:
+        -0.5px -0.5px 0 white,  
+        0.5px -0.5px 0 white,
+        -0.5px 0.5px 0 white,
+        0.5px 0.5px 0 white;
+}
+.theme-blue h1 {
+    text-shadow:
+        -0.5px -0.5px 0 black,  
+        0.5px -0.5px 0 black,
+        -0.5px 0.5px 0 black,
+        0.5px 0.5px 0 black;
+}
+.theme-unicorn h1 {
+    text-shadow:
+        -0.5px -0.5px 0 deeppink,  
+        0.5px -0.5px 0 deeppink,
+        -0.5px 0.5px 0 deeppink,
+        0.5px 0.5px 0 deeppink;
+}
+
 .theme-black nav a, .theme-black #closebtn {
     color: #818181;
 }
 .theme-white nav a, .theme-white #closebtn {
-    color: #ccc;
+    color: #bbb;
 }
 .theme-blue nav a, .theme-blue #closebtn {
-    color: #ccc;
+    color: #bbb;
 }
 .theme-unicorn nav a, .theme-unicorn #closebtn {
     color: lightyellow;
@@ -150,6 +179,30 @@ main {
     height: 50%;
 }
 
+#parallax-kampfsport-1 {
+    background-image: url("kampfsport1.jpg");
+}
+#parallax-kampfsport-2 {
+    background-image: url("kampfsport2.jpg");
+    height: 50%;
+}
+
+#parallax-gaming-1 {
+    background-image: url("gaming1.jpg");
+}
+#parallax-gaming-2 {
+    background-image: url("gaming2.jpg");
+    height: 50%;
+}
+
+#parallax-webdesign-1 {
+    background-image: url("webdesign1.jpg");
+}
+#parallax-webdesign-2 {
+    background-image: url("webdesign2.jpg");
+    height: 50%;
+}
+
 #openbtn {
     left: 0;
     position: fixed;
@@ -185,6 +238,11 @@ footer {
 }
 
 .parallax a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.parallax a.parallax-link {
     background-color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
     padding: 10px 15px;
