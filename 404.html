@@ -43,6 +43,11 @@
         body.classList.add("theme-" + color);
         document.cookie = "theme=" + color;
       };
+
+      $(document).ready(function(){
+        var color = document.cookie.split('heme')[1].split(';')[0];
+        changeColor(color);
+      });
     </script>
 
     <title>404 - Adrian Betschart</title>
