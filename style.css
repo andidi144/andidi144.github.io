@@ -317,6 +317,10 @@ main {
     height: 50%;
 }
 
+#parallax-404 {
+    background-image: url("images/404.jpg");
+}
+
 #openbtn {
     left: 0;
     position: fixed;

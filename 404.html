@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Serif+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script>
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+      function openNav() {
+        if (document.getElementById("mySidenav").style.left === "0px") {
+          document.getElementById("mySidenav").style.left = "-250px";
+          document.getElementById("slide").style.left = "0";
+          document.getElementById("openbtn").style.left = "0";
+        } else {
+          document.getElementById("mySidenav").style.left = "0";
+          document.getElementById("slide").style.left = "250px";
+          document.getElementById("openbtn").style.left = "250px";
+        }
+      };
+
+      function changeColor(color) {
+        if(color == "") {
+          color = white;
+        }
+        var body = document.getElementsByTagName("body")[0];
+        body.classList = "";
+        body.classList.add("theme-" + color);
+        document.cookie = "theme=" + color;
+      };
+    </script>
+
+    <title>404 - Adrian Betschart</title>
+  </head>
+  <body class="theme-white">
+    <nav id="mySidenav">
+      <span id="closebtn" onclick="openNav()">&times;</span>
+      <a href="index.html">Home</a>
+      <a href="webdesign.html">Webdesign</a>
+      <a href="kampfsport.html">Kampfsport</a>
+      <a href="gaming.html">Gaming</a>
+    </nav>
+    <span id="openbtn" onclick="openNav()">&#9776</span>
+    <div id="slide">
+      <main>
+        <div class="parallax" id="parallax-404">
+          <div class="parallax-title">
+              <h1>Error 404</h1>
+              <a class="parallax-link" href="index.html">Zur Home Seite</a>
+          </div>
+        </div>
+        <footer>
+          Adrian Betschart © 2017
+          <div class="themes">
+            <button class="color-picker" id="picker-white" onclick="changeColor('white')"></button>
+            <button class="color-picker" id="picker-black" onclick="changeColor('black')"></button>
+            <button class="color-picker" id="picker-blue" onclick="changeColor('blue')"></button>
+            <button class="color-picker" id="picker-unicorn" onclick="changeColor('unicorn')"></button>
+          </div>
+        </footer>
+      </main>
+      
+    </div>
+  </body>
+</html>
