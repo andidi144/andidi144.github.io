@@ -116,16 +116,16 @@ nav a {
     color: lightyellow;
 }
 
-.theme-black nav a:hover, .theme-black nav a:focus, .theme-black #closebtn:hover {
+.theme-black nav a:hover, .theme-black nav a:focus, .theme-black #closebtn:hover, .theme-black nav a.active {
     color: #f1f1f1;
 }
-.theme-white nav a:hover, .theme-white nav a:focus, .theme-white #closebtn:hover {
+.theme-white nav a:hover, .theme-white nav a:focus, .theme-white #closebtn:hover, .theme-white nav a.active {
     color: #555;
 }
-.theme-blue nav a:hover, .theme-blue nav a:focus, .theme-blue #closebtn:hover {
+.theme-blue nav a:hover, .theme-blue nav a:focus, .theme-blue #closebtn:hover, .theme-blue nav a.active {
     color: #f1f1f1;
 }
-.theme-unicorn nav a:hover, .theme-unicorn nav a:focus, .theme-unicorn #closebtn:hover {
+.theme-unicorn nav a:hover, .theme-unicorn nav a:focus, .theme-unicorn #closebtn:hover, .theme-unicorn nav a.active {
     color: yellow;
 }
 
@@ -217,8 +217,9 @@ nav a {
 }
 
 .social-media {
-    width: 60px;
-    height: 60px;
+    max-width: 60px;
+    width: 15%;
+    height: 100%;
     display: block;
     float: left;
     background-size: 100% 100%;
@@ -355,58 +356,37 @@ footer {
     text-decoration: none;
 }
 
-.parallax a.parallax-link {
+.parallax-title a.parallax-link {
     background-color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
     padding: 10px 15px;
     color: white;
     text-align: center;
-    position: absolute;
-    top: calc(50% + 100px);
-    left: 50%;
-    transform: translate(-50%, -50%);
     border: solid white 1px;
     border-radius: 5px;
     margin: 0;
 }
 
-.parallax h1 {
-    font-family: 'Source Serif Pro', serif;
+.parallax-title {
+    margin: auto;
     text-align: center;
-    position: absolute;
+    position: relative;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    margin: 0;
+    transform: translate(0, -50%)
 }
 
-.parallax h2 {
+.parallax-title h1 {
     font-family: 'Source Serif Pro', serif;
-    text-align: center;
-    position: absolute;
-    top: calc(50% + 50px);
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 50px;
+    margin: 0 0 10px 0;
+}
+
+.parallax-title h2 {
+    font-family: 'Source Serif Pro', serif;
     font-size: 25px;
     font-weight: lighter;
-    margin: 0;
+    margin: 0 0 30px 0;
     white-space: nowrap;
-}
-
-@media screen and (max-width: 500px) {
-    .parallax h2 {
-        font-size: 5vw;
-    }
-}
-
-@media screen and (max-width: 752px) {
-    .parallax h2 {
-        top: calc(50% + 90px);
-    }
-    .parallax a {
-        top: calc(50% + 150px);
-    }
 }
 
 .color-picker {

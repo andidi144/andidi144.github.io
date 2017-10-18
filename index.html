@@ -25,14 +25,16 @@
       };
 
       function changeColor(color) {
-        console.log("test");
         var body = document.getElementsByTagName("body")[0];
-        console.log(body);
         body.classList = "";
         body.classList.add("theme-" + color);
+        document.cookie = "theme=" + color;
       };
 
       $(document).ready(function(){
+        var color = document.cookie.slice(6);
+        changeColor(color);
+
         $("#age")[0].innerHTML = ~~((Date.now() - new Date(1999, 3, 31)) / (31557600000));
 
         // Add smooth scrolling to all links
@@ -65,7 +67,7 @@
   <body class="theme-white">
     <nav id="mySidenav">
       <span id="closebtn" onclick="openNav()">&times;</span>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="webdesign.html">Webdesign</a>
       <a href="kampfsport.html">Kampfsport</a>
       <a href="gaming.html">Gaming</a>
@@ -74,9 +76,11 @@
     <div id="slide">
       <main>
         <div class="parallax" id="parallax-1">
-          <h1>Adrian Betschart</h1>
-          <h2><a href="webdesign.html">Webdesign</a> | <a href="webdesign.html">Kampfsport</a> | <a href="webdesign.html">Gaming</a></h2>
-          <a class="parallax-link" href="#section1">Über mich...</a>
+          <div class="parallax-title">
+              <h1>Adrian Betschart</h1>
+              <h2><a href="webdesign.html">Webdesign</a> | <a href="kampfsport.html">Kampfsport</a> | <a href="gaming.html">Gaming</a></h2>
+              <a class="parallax-link" href="#section1">Über mich...</a>
+          </div>
         </div>
         <div class="section" id="section1">
           <h2>Über mich</h2>
@@ -111,8 +115,8 @@
         <footer>
           Adrian Betschart © 2017
           <div class="themes">
-            <button class="color-picker" id="picker-black" onclick="changeColor('black')"></button>
             <button class="color-picker" id="picker-white" onclick="changeColor('white')"></button>
+            <button class="color-picker" id="picker-black" onclick="changeColor('black')"></button>
             <button class="color-picker" id="picker-blue" onclick="changeColor('blue')"></button>
             <button class="color-picker" id="picker-unicorn" onclick="changeColor('unicorn')"></button>
           </div>

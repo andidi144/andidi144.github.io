@@ -25,14 +25,16 @@
       };
 
       function changeColor(color) {
-        console.log("test");
         var body = document.getElementsByTagName("body")[0];
-        console.log(body);
         body.classList = "";
         body.classList.add("theme-" + color);
+        document.cookie = "theme=" + color;
       };
 
       $(document).ready(function(){
+        var color = document.cookie.slice(6);
+        changeColor(color);
+
         // Add smooth scrolling to all links
         $("a").on('click', function(event) {
 
@@ -65,15 +67,17 @@
       <span id="closebtn" onclick="openNav()">&times;</span>
       <a href="index.html">Home</a>
       <a href="webdesign.html">Webdesign</a>
-      <a href="kampfsport.html">Kampfsport</a>
+      <a href="kampfsport.html" class="active">Kampfsport</a>
       <a href="gaming.html">Gaming</a>
     </nav>
     <span id="openbtn" onclick="openNav()">&#9776</span>
     <div id="slide">
       <main>
         <div class="parallax" id="parallax-kampfsport-1">
-          <h1>Kampfsport</h1>
-          <a class="parallax-link" href="#section1">Mehr...</a>
+          <div class="parallax-title">
+            <h1>Kampfsport</h1>
+            <a class="parallax-link" href="#section1">Mehr...</a>
+          </div>
         </div>
         <div class="section" id="section1">
           <h2>Kampfsport</h2>
@@ -99,8 +103,8 @@
         <footer>
           Adrian Betschart © 2017
           <div class="themes">
-            <button class="color-picker" id="picker-black" onclick="changeColor('black')"></button>
             <button class="color-picker" id="picker-white" onclick="changeColor('white')"></button>
+            <button class="color-picker" id="picker-black" onclick="changeColor('black')"></button>
             <button class="color-picker" id="picker-blue" onclick="changeColor('blue')"></button>
             <button class="color-picker" id="picker-unicorn" onclick="changeColor('unicorn')"></button>
           </div>
