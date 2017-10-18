@@ -222,7 +222,9 @@ nav a {
     height: 100%;
     display: block;
     float: left;
-    background-size: 100% 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
     margin: auto;
 }
 
@@ -244,7 +246,6 @@ nav a {
 
 .googleplus {
     background-image: url("images/socialmedia/googleplus.svg");
-    border-radius: 50%;
 }
 
 .email {
@@ -383,14 +384,14 @@ footer {
 .parallax-title h1 {
     font-family: 'Source Serif Pro', serif;
     font-size: 50px;
-    margin: 0 0 10px 0;
+    margin: 0 20px 10px 20px;
 }
 
 .parallax-title h2 {
     font-family: 'Source Serif Pro', serif;
     font-size: 25px;
     font-weight: lighter;
-    margin: 0 0 30px 0;
+    margin: 0 20px 30px 20px;
 }
 
 .color-picker {
@@ -405,4 +406,8 @@ footer {
 
 .themes {
     float: right;
+}
+
+.section p {
+    font-size: 18px;
 }
