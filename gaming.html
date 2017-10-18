@@ -35,8 +35,6 @@
       };
 
       $(document).ready(function(){
-        var color = document.cookie.slice(6);
-        changeColor(color);
 
         // Add smooth scrolling to all links
         $("a").on('click', function(event) {
@@ -60,6 +58,9 @@
             });
           } // End if
         });
+
+        var color = document.cookie.slice(6);
+        changeColor(color);
       });
     </script>
 

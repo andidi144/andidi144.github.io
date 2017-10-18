@@ -244,6 +244,7 @@ nav a {
 
 .googleplus {
     background-image: url("images/socialmedia/googleplus.svg");
+    border-radius: 50%;
 }
 
 .email {
@@ -390,7 +391,6 @@ footer {
     font-size: 25px;
     font-weight: lighter;
     margin: 0 0 30px 0;
-    white-space: nowrap;
 }
 
 .color-picker {

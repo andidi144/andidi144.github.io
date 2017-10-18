@@ -35,8 +35,6 @@
       };
 
       $(document).ready(function(){
-        var color = document.cookie.slice(6);
-        changeColor(color);
 
         $("#age")[0].innerHTML = ~~((Date.now() - new Date(1999, 3, 31)) / (31557600000));
 
@@ -62,6 +60,9 @@
             });
           } // End if
         });
+
+        var color = document.cookie.slice(6);
+        changeColor(color);
       });
     </script>
 
