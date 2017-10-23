@@ -1,26 +1,27 @@
 function openNav() {
-    if (document.getElementById("mySidenav").style.left === "0px") {
-      document.getElementById("mySidenav").style.left = "-250px";
-      document.getElementById("slide").style.left = "0";
-      document.getElementById("openbtn").style.left = "0";
-    } else {
-      document.getElementById("mySidenav").style.left = "0";
-      document.getElementById("slide").style.left = "250px";
-      document.getElementById("openbtn").style.left = "250px";
-    }
-  };
+  if (document.getElementById("mySidenav").style.left === "0px") {
+    document.getElementById("mySidenav").style.left = "-250px";
+    document.getElementById("slide").style.left = "0";
+    document.getElementById("openbtn").style.left = "0";
+  } else {
+    document.getElementById("mySidenav").style.left = "0";
+    document.getElementById("slide").style.left = "250px";
+    document.getElementById("openbtn").style.left = "250px";
+  }
+};
 
-  function changeColor(color) {
-    if(color == "") {
-      color = "white";
-    }
-    var body = document.getElementsByTagName("body")[0];
-    body.classList = "";
-    body.classList.add("theme-" + color);
-    document.cookie = "theme=" + color;
-  };
+function changeColor(color) {
+  if(color == "") {
+    color = "white";
+  }
+  var body = document.getElementsByTagName("body")[0];
+  body.classList = "";
+  body.classList.add("theme-" + color);
+  document.cookie = "theme=" + color;
+};
 
-  function jqueryLoaded(){
+function jqueryLoaded(){
+  $(document).ready(function(){
 
     $("#age")[0].innerHTML = ~~((Date.now() - new Date(1999, 3, 31)) / (31557600000));
 
@@ -49,4 +50,5 @@ function openNav() {
 
     var color = document.cookie.split('heme=')[1].split(';')[0];
     changeColor(color);
-  };
+  })
+};
