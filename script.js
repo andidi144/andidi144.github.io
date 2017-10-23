@@ -20,7 +20,7 @@ function openNav() {
     document.cookie = "theme=" + color;
   };
 
-  $(document).ready(function(){
+  function jqueryLoaded(){
 
     $("#age")[0].innerHTML = ~~((Date.now() - new Date(1999, 3, 31)) / (31557600000));
 
@@ -49,4 +49,4 @@ function openNav() {
 
     var color = document.cookie.split('heme=')[1].split(';')[0];
     changeColor(color);
-  });
+  };
