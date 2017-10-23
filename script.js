@@ -23,7 +23,10 @@ function changeColor(color) {
 function jqueryLoaded(){
   $(document).ready(function(){
 
-    $("#age")[0].innerHTML = ~~((Date.now() - new Date(1999, 3, 31)) / (31557600000));
+    var ageField = $("#age")[0];
+    if(ageField) {
+      ageField.innerHTML = ~~((Date.now() - new Date(1999, 3, 31)) / (31557600000));
+    }
 
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
