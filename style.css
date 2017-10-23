@@ -1,3 +1,4 @@
+/* General styles */
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -18,26 +19,92 @@ body {
     overflow: hidden;
 }
 
-/* The side navigation menu */
-nav {
-    height: 100%; /* 100% Full-height */
-    width: 250px; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: -250px;
-    overflow: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: all linear 0.4s; /* 0.5 second transition effect to slide in the sidenav */
+main {
+    width: 100%;
+    height: 100%;
 }
 
-/* The navigation menu links */
+footer {
+    padding: 50px;
+    background-color: inherit;  
+    position: relative;
+}
+
+.section {
+    overflow-x: hidden;
+    padding: 60px;
+    background-color: inherit;
+}
+
+.section p {
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.5em;
+}
+/* ************************************************************************ */
+
+
+/* Navigation */
+nav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    overflow: hidden;
+    padding-top: 60px;
+    transition: all linear 0.4s;
+}
+
 nav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     display: block;
 }
+
+
+@media screen and (max-height: 450px) {
+    nav {
+        padding-top: 15px;
+    }
+    nav a {
+        font-size: 18px;
+    }
+}
+
+#openbtn {
+    left: 0;
+    position: fixed;
+    transition: all linear 0.4s;
+    z-index: 100;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+#closebtn {
+    margin: 15px 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+#slide {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all linear 0.4s;
+}
+/* ************************************************************************ */
+
 
 /* Themes */
 .theme-black, #picker-black {
@@ -129,17 +196,27 @@ nav a {
     color: yellow;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-.section {
-    overflow-x: hidden;
-    padding: 60px;
-    background-color: inherit;
+.themes {
+    float: right;
 }
 
+.color-picker {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 1px solid lightgray;
+    margin-left: 5px;
+    background-color: inherit;
+}
+/* ************************************************************************ */
+
+
+/* Profile-Card for Social Media */
 .profile-section {
     overflow-x: hidden;
     background-color: inherit;
-    padding: 20px;    
+    padding: 20px;
 }
 
 .profile-card {
@@ -251,31 +328,12 @@ nav a {
 .email {
     background-image: url("images/socialmedia/email.svg");
 }
+/* ************************************************************************ */
 
-p {
-    line-height: 1.5em;
-}
 
-main {
-    width: 100%;
-    height: 100%;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    nav {
-        padding-top: 15px;
-    }
-    nav a {
-        font-size: 18px;
-    }
-}
-
+/* Parallax */
 .parallax {
-    /* Full height */
     height: 100%;
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -323,40 +381,6 @@ main {
     background-image: url("images/404.jpg");
 }
 
-#openbtn {
-    left: 0;
-    position: fixed;
-    transition: all linear 0.4s;
-    z-index: 100;
-    font-size: 30px;
-    cursor: pointer;
-    margin: 10px 20px;
-}
-
-#closebtn {
-    margin: 15px 25px;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 30px;
-    margin-left: 50px;
-}
-
-#slide {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all linear 0.4s;
-}
-
-footer {
-    padding: 50px;
-    background-color: inherit;  
-    position: relative;
-}
-
 .parallax a {
     color: inherit;
     text-decoration: none;
@@ -393,21 +417,4 @@ footer {
     font-weight: lighter;
     margin: 0 20px 30px 20px;
 }
-
-.color-picker {
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    border: 1px solid lightgray;
-    margin-left: 5px;
-    background-color: inherit;
-}
-
-.themes {
-    float: right;
-}
-
-.section p {
-    font-size: 18px;
-}
+/* ************************************************************************ */
