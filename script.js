@@ -11,9 +11,6 @@ function openNav() {
 };
 
 function changeColor(color) {
-  if(color == "") {
-    color = "white";
-  }
   var body = document.getElementsByTagName("body")[0];
   body.classList = "";
   body.classList.add("theme-" + color);
@@ -52,6 +49,11 @@ function jqueryLoaded(){
     });
 
     var color = document.cookie.split('heme=')[1].split(';')[0];
-    changeColor(color);
+    if (color) {
+      changeColor(color);    
+    }
+    else {
+      changeColor('white');
+    } 
   })
 };
