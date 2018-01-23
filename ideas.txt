@@ -1,0 +1,3 @@
+More parallax layers: z.B.: Dojo as background back layer (with css blur filter), me as base layer, text as fore layer
+
+Use symbols / icons in title parallax to make it more visual
