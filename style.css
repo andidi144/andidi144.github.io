@@ -306,7 +306,7 @@ nav a {
 }
 
 .social-media:hover {
-    filter: sepia(1);
+    filter: grayscale(1);
 }
 
 .facebook {
@@ -319,6 +319,14 @@ nav a {
 
 .twitter {
     background-image: url("images/socialmedia/twitter.svg");
+}
+
+.github {
+    background-image: url("images/socialmedia/github.svg");
+}
+
+.github:hover {
+    filter: invert(30%);
 }
 
 .googleplus {
